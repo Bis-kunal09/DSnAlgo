@@ -15,7 +15,10 @@ public:
         for(int i=0;i<N;i++){
             dp[i][0]=false;
         }
-        dp[0][arr[0]]=true;
+        if(arr[0]<=sum){
+            dp[0][arr[0]]=true;    
+        }
+        
         for(int i=1;i<N;i++){
             for(int j=1;j<=sum;j++){
                 bool nottake=dp[i-1][j];
